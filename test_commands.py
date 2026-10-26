@@ -58,3 +58,17 @@ def test_command_output(python_command):
 
     assert result.returncode == 0
     assert result.stdout.strip() == "test completed"
+
+#This is for parameterization
+@pytest.mark.parametrize(
+    "code, expected_exit",
+    [
+        ("print('hello')", 0),
+        ("print('automation')", 0),
+        ("import sys; sys.exit(2)", 2),
+    ],
+)
+def test_exit_codes(code, expected_exit):
+    result = run_command(["python3", "-c", code])
+
+    assert result.returncode == expected_exit
