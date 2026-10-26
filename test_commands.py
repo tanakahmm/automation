@@ -1,6 +1,10 @@
 import subprocess
 import pytest
 
+@pytest.fixture
+def python_command():
+    return ["python3", "-c", "print('test completed')"]
+
 
 def run_command(command:list[str],timeout:float=5.0):
     return subprocess.run(command,timeout=timeout,check=False,text=True,capture_output=True)
@@ -38,3 +42,19 @@ def test_command_timeout():
             timeout=1.0,
         )
         print("Result:Timeout after {timeout} seconds ")
+
+
+def test_configuration_file(tmp_path):
+    config_file = tmp_path / "config.txt"
+
+    config_file.write_text("mode=test")
+
+    assert config_file.exists()
+    assert config_file.read_text() == "mode=test"
+
+
+def test_command_output(python_command):
+    result = run_command(python_command)
+
+    assert result.returncode == 0
+    assert result.stdout.strip() == "test completed"
