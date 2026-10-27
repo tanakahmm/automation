@@ -1,0 +1,36 @@
+{
+  "total": 3,
+  "passed": 2,
+  "failed": 0,
+  "timeouts": 1,
+  "errors": 0,
+  "results": [
+    {
+      "name": "python_success",
+      "status": "PASS",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "stdout": "hello\n",
+      "stderr": "",
+      "duration_seconds": 0.066
+    },
+    {
+      "name": "expected_failure",
+      "status": "PASS",
+      "expected_exit_code": 2,
+      "actual_exit_code": 2,
+      "stdout": "",
+      "stderr": "",
+      "duration_seconds": 0.08
+    },
+    {
+      "name": "slow_command",
+      "status": "TIMEOUT",
+      "expected_exit_code": 0,
+      "actual_exit_code": null,
+      "stdout": "",
+      "stderr": "Timed out after 1 seconds",
+      "duration_seconds": 1.006
+    }
+  ]
+}

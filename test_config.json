@@ -1,0 +1,23 @@
+
+{
+  "tests": [
+    {
+      "name": "python_success",
+      "command": ["python3", "-c", "print('hello')"],
+      "expected_exit_code": 0,
+      "timeout": 3
+    },
+    {
+      "name": "expected_failure",
+      "command": ["python3", "-c", "import sys; sys.exit(2)"],
+      "expected_exit_code": 2,
+      "timeout": 3
+    },
+    {
+      "name": "slow_command",
+      "command": ["python3", "-c", "import time; time.sleep(5)"],
+      "expected_exit_code": 0,
+      "timeout": 1
+    }
+  ]
+}
