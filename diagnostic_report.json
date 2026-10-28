@@ -1,0 +1,35 @@
+{
+  "file": "sample_app.log",
+  "total_lines": 7,
+  "counts": {
+    "ERROR": 2,
+    "WARNING": 1,
+    "TIMEOUT": 1,
+    "FAILED": 0,
+    "EXCEPTION": 0
+  },
+  "matches": [
+    {
+      "line_number": 3,
+      "keywords": [
+        "WARNING"
+      ],
+      "message": "2026-10-28 14:00:03 WARNING Retry attempt 1"
+    },
+    {
+      "line_number": 4,
+      "keywords": [
+        "ERROR"
+      ],
+      "message": "2026-10-28 14:00:04 ERROR Connection refused"
+    },
+    {
+      "line_number": 6,
+      "keywords": [
+        "ERROR",
+        "TIMEOUT"
+      ],
+      "message": "2026-10-28 14:00:06 ERROR Connection timeout"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+2026-10-28 14:00:01 INFO Service starting
+2026-10-28 14:00:02 INFO Configuration loaded
+2026-10-28 14:00:03 WARNING Retry attempt 1
+2026-10-28 14:00:04 ERROR Connection refused
+2026-10-28 14:00:05 INFO Retrying connection
+2026-10-28 14:00:06 ERROR Connection timeout
+2026-10-28 14:00:07 INFO Diagnostic collection started
